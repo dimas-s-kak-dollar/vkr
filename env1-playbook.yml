@@ -1,0 +1,31 @@
+---
+- hosts: addc
+  tasks:
+  - name: Create addc environment dir
+    ansible.windows.win_file:
+      path: C:\env1
+      state: directory
+  - name: Create addc environment file
+    ansible.windows.win_file:
+      path: C:\env1\addcfile.txt
+      state: touch
+- hosts: resdc
+  tasks:
+  - name: Create resdc environment dir
+    ansible.windows.win_file:
+      path: C:\env1
+      state: directory
+  - name: Create resdc environment file
+    ansible.windows.win_file:
+      path: C:\env1\resdcfile.txt
+      state: touch
+- hosts: web
+  tasks:
+  - name: Create web environment dir
+    ansible.windows.win_file:
+      path: C:\env1
+      state: directory
+  - name: Create web environment file
+    ansible.windows.win_file:
+      path: C:\env1\webfile.txt
+      state: touch
