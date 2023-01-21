@@ -1,0 +1,32 @@
+[addc]
+192.168.10.10
+
+[resdc]
+192.168.11.10
+
+[web]
+172.16.1.10
+
+[addc:vars]
+ansible_user = ansibleuser@KYRSACH2021.LOCAL
+ansible_password = Rehcjdfz2022@
+ansible_connection = winrm
+ansible_port = 5985
+ansible_winrm_transport = ntlm
+ansible_winrm_server_cert_validation = ignore
+
+[resdc:vars]
+ansible_user = ansibleuser@KYRSACH2021.LOCAL
+ansible_password = Rehcjdfz2022@
+ansible_connection = winrm
+ansible_port = 5985
+ansible_winrm_transport = ntlm
+ansible_winrm_server_cert_validation = ignore
+
+[web:vars]
+ansible_user = ansibleuser@KYRSACH2021.LOCAL
+ansible_password = Rehcjdfz2022@
+ansible_connection = winrm
+ansible_port = 5985
+ansible_winrm_transport = ntlm
+ansible_winrm_server_cert_validation = ignore
